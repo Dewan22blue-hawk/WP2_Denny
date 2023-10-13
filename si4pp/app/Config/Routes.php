@@ -8,3 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
+
+
+$routes->get('form', 'Form::index');
+$routes->post('form', 'Form::index');
