@@ -6,7 +6,7 @@
 
 <body>
 
-    <?= validation_list_errors() ?>
+    <h1><?= validation_list_errors() ?></h1>
 
     <?= form_open('form') ?>
 
