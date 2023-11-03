@@ -9,7 +9,7 @@
 
 <body>
     <center>
-        <form action="<?= base_url('/matakuliah/cetuk'); ?>" method="post">
+        <form action="<?= base_url('/matkul/cetak'); ?>" method="post">
 
             <table>
                 <tr>
@@ -27,7 +27,7 @@
                     <th>:</th>
                     <td>
                         <input type="text" name="kode" id="kode" placeholder="Kode Matakuliah" value="<?= old('kode'); ?>">
-                        <p><?= isset($validation) ? $validation->getError('kode') : '' ?>
+                        <p><?= $validation->getError('kode'); ?>
                         </p>
                     </td>
 
@@ -36,7 +36,7 @@
                     <th>Nama MK</th>
                     <td>:</td>
                     <td>
-                        <input type="text" name="nama" placeholder="Kode Nama" value="<?= old('nama'); ?>">
+                        <input type="text" name="nama" placeholder="Nama Mata Kuliah" value="<?= old('nama'); ?>">
                         <p><?= isset($validation) ? $validation->getError('nama') : '' ?>
                         </p>
                     </td>
@@ -45,7 +45,7 @@
                 <tr>
                     <td>
                         <select name="sks" id="sks">
-                            <option value="">pilih SKS</option>
+                            <option value="">Pilih SKS</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
@@ -56,7 +56,7 @@
                 </tr>
                 <tr>
                     <td colspan="3" align="center">
-                        <input type="submit" value="submit">
+                        <input type="submit" value="Submit">
                     </td>
                 </tr>
             </table>
